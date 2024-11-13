@@ -1,0 +1,27 @@
+{
+  "name": "gra-outsera-test",
+  "version": "1.0.0",
+  "description": "A simple API that serves data from Golden Raspberry Awards.",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "test": "mocha --timeout 5000 --exit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gevichiatto/gra-outsera-test.git"
+  },
+  "author": "Geovanne Vichiatto",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gevichiatto/gra-outsera-test/issues"
+  },
+  "homepage": "https://github.com/gevichiatto/gra-outsera-test#readme",
+  "devDependencies": {
+    "better-sqlite3": "^11.5.0",
+    "body-parser": "^1.20.3",
+    "cors": "^2.8.5",
+    "express": "^4.21.1",
+    "nodemon": "^3.1.7"
+  }
+}
