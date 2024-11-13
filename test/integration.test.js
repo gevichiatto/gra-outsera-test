@@ -21,6 +21,20 @@ describe('GRA - Outsera API Integration Tests', () => {
 
       assert(Array.isArray(res.body.min), '"min" should be an array');
       assert(Array.isArray(res.body.max), '"max" should be an array');
+
+      res.body.min.forEach(item => {
+        assert.strictEqual(typeof item.producer, 'string', '"producer" should be a string');
+        assert.strictEqual(typeof item.interval, 'number', '"interval" should be a number');
+        assert.strictEqual(typeof item.previousWin, 'number', '"previousWin" should be a number');
+        assert.strictEqual(typeof item.followingWin, 'number', '"followingWin" should be a number');
+      });
+
+      res.body.max.forEach(item => {
+        assert.strictEqual(typeof item.producer, 'string', '"producer" should be a string');
+        assert.strictEqual(typeof item.interval, 'number', '"interval" should be a number');
+        assert.strictEqual(typeof item.previousWin, 'number', '"previousWin" should be a number');
+        assert.strictEqual(typeof item.followingWin, 'number', '"followingWin" should be a number');
+      });
     });
   });
 
